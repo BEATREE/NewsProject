@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="Package1" extends="struts-default"><!-- 关于登陆处理的包 -->
+		<action name="indexAction" class="zzu.ruanko.action.IndexAction">
+			<result name="success">index.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="doLoginAction" class="zzu.ruanko.action.LoginAction">
+			<result name="success">user/index.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+	<package name="UserPackage" extends="struts-default">
+		<action name="*User" class="zzu.ruanko.action.UserAction" method="{1}User">
+			<result name="exist" >register.jsp</result> 
+			<result name="registersuccess">login.jsp</result>
+			<result name="success">user/index.jsp</result>
+			<result name="out" type="chain">indexAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+	<package name="AdminPackage" extends="struts-default">
+		<action name="*Admin" class="zzu.ruanko.action.AdminAction" method="{1}Admin">
+			<result name="success">admin/index.jsp</result>
+			<result name="allNewsSuccess">admin/allnews.jsp</result>
+			<result name="deleteSuccess" type="chain">allNewsAdmin</result>
+			<result name="stateSuccess" type="chain">allNewsAdmin</result>
+			<result name="allUserSuccess" >admin/allusers.jsp</result>
+			<result name="deleteUserSuccess" type="chain">allUserAdmin</result>
+			<result name="out" type="chain">indexAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+	<package name="NewsPackage" extends="struts-default">
+		<action name="*News" class="zzu.ruanko.action.NewsAction" method="{1}News">
+			<result name="updateSuccess" type="chain">myNews</result>
+			<result name="searchSuccess">results.jsp</result>
+			<result name="myNewsSuccess">user/mynews.jsp</result>
+			<result name="stateSuccess" type="chain">myNews</result>
+			<result name="editSuccess">user/publish.jsp</result>
+			<result name="reeditSuccess" type="chain">readNews</result>
+			<result name="searchEmpty">notfound.jsp</result>
+			<result name="deleteSuccess" type="chain">myNews</result>
+			<result name="jump" type="chain">aboutNews</result>
+			<result name="success">preview.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+</struts>    

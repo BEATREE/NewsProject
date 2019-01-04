@@ -1,0 +1,229 @@
+@CHARSET "UTF-8";
+*{
+	transition:all .38s;
+	-moz-transition: all .38s; /* Firefox 4 */
+	-webkit-transition: all .38s; /* Safari 和 Chrome */
+	-o-transition: all .38s; /* Opera */
+}
+body{
+	box-sizing:border-box;
+	color:black;
+	width:80%;
+	margin:0 auto;
+}
+div{
+	padding: 0;
+	margin: 0;
+}
+img{
+	text-align:center;
+}
+
+.logo{
+	width:200px;
+	margin-top: 2px;
+	margin-bottom:6px;
+}
+/* 导航栏部分css */
+.nav > ul >li{
+	float: left;
+	list-style-type: none;
+	margin-left: 30px;
+}
+#searchInput{
+	float: right;
+}
+/*首页新闻列表*/
+.AllNews{
+	text-align:center;
+	padding-top:20px;
+	max-width: 70%;
+	height: auto;
+}
+.AllNews > ul,.newstype >ul{
+	text-align:center;
+	padding-left:2px;
+	list-style-type: none;
+}
+.newstype a{
+	color: black;
+}
+.hiddenbox{
+	transition:all 0s;
+	visibility:hidden;
+	height: 0;
+}
+.types{		/*此处为新闻分类的CSS文件*/
+	display: inline-block;
+	width: 30%;
+	margin:5px;
+	margin-top:8px;
+	font-size:16px;
+	position:relative;
+	border-radius:5px;
+	padding:3px 0px;
+	box-shadow: 4px 4px 6px #98F5FF;
+/* 	border:1px solid red; */
+}
+.types:HOVER{
+	font-weight:bold;
+	box-shadow: 4px 4px 6px #546de8;
+}
+.chooseNews{
+	transition:all .5s;
+	display:inline-block;
+	margin-left:15px;
+	margin-top:13px;
+	width:30%;
+	max-height:180px;
+	overflow:hidden;
+	background:#87cefa;
+	border-radius: 4px;
+	box-shadow:2px 2px 2px grey;
+}
+.chooseNews .postTitle{
+	margin-top:12px;
+	max-height: 80px;
+	margin-bottom:12px;
+	overflow: hidden;
+}
+.chooseNews:HOVER{
+	box-shadow: 5px 5px 7px #546de8;
+}
+.chooseNews:HOVER h2{
+	font-size:1.95rem;
+	color:red;
+}
+.chooseNews h1:HOVER{
+	color: #4169E1;
+}
+.chooseNews .postType{
+	
+	background:#ADD8E6;
+	width: 25%;
+}
+.chooseNews .chooseInfo{
+	display: inline-block;
+	margin-left: 2px;
+}
+.newsbox{
+	display: inline-block;
+	margin-bottom: 15px;
+	padding-top:8px;
+	height: 200px;
+	width: 90%;
+	border-radius:6px;
+	text-align:left;
+	background: #d9f1f2;
+	overflow:hidden;
+	position:relative;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.newsbox h3{
+	text-align: center;
+}
+.newsbox:HOVER{
+	background: #c0f2f3;
+	box-shadow: 4px 4px 6px #98F5FF;
+}
+.lesscontent{ /* 文章摘要部分CSS */
+	margin-top:5px;
+	height: 120px;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+div.info{
+	margin-left:0px;
+	text-align:left;
+	padding:3px 18px;
+
+	background:#DCDCDC;
+}
+.ndate{
+	margin-left: 12px;
+}
+.newsbox a:HOVER{
+	color:red;
+	text-decoration:none;
+	margin-left: 8px;
+}
+.newsList a{
+	font-size: 14px;
+	padding-bottom:2px;
+}
+.newsList a:HOVER{/*第一版本的首页新闻列表class*/
+	transition:all .3s;
+	color: red;
+	font-size:14.5px;
+	text-decoration: none;
+	font-weight: 520;
+}
+.newsbegin{
+	text-align: left;
+}
+.rightPart{
+	float:right;
+	margin-right:2%;
+	text-align:center;
+	padding-top:20px;
+	padding-left: 15px;	
+	max-width: 28%;
+	height: auto;
+	overflow-x: visible;
+}
+.singlebox{
+	margin-bottom: 12px;
+}
+.singlebox p{
+	text-align: left;
+}
+.singlebox input{
+	margin-right: 6px;	
+}
+/*用户后台主体CSS*/
+.formdiv form{
+	padding:16px;
+	width:auto;
+}
+
+div.container.main{
+	margin-top: 36px;
+}
+div.row.form{
+	margin:0 auto;
+	margin-left:42%;
+}
+input.btn.btn-primary{
+	margin-left: 22px;
+}
+/*文章详情页头部部分*/
+.topmessage{
+	text-align: center;
+	margin-bottom: 16px;
+}
+/*文章页右半部分*/
+.info{
+	margin-left:22px;
+}
+.rightbox{
+	border-left: 2px dashed grey;
+}
+.rightbox .aboutNews{
+	line-height:1.5;
+	margin-bottom: 8px;
+	overflow: visible;
+}
+.rightbox .aboutNews a:HOVER{
+	margin-left: 3px;
+	text-decoration:none;
+	color: red;
+
+}
+/*页脚部分css*/
+.footer{
+	border-top:2px dashed grey;
+	margin-top:12px;
+	padding-top:6px;
+	padding-bottom:6px;
+	text-align:center;
+}
